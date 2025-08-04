@@ -1,127 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>💍 Undangan Pernikahan Nan D. Alpeenz 💐</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💍 Wedding Isekai - Alpin x Hu Tao x Elaina 💍</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Zen+Kurenaido&display=swap');
+body {
+  margin: 0;
+  font-family: 'Zen Kurenaido', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: url('../img/wedding-bg.jpg') no-repeat center center/cover;
-      color: #fff;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-      overflow-x: hidden;
-    }
-    h1, h2 {
-      font-family: 'Great Vibes', cursive;
-    }
-    .overlay {
-      background: rgba(0,0,0,0.6);
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      z-index: -1;
-    }
-    .bride-groom img {
-      border-radius: 50%;
-      border: 4px solid #fff;
-      transition: transform 0.3s;
-    }
-    .bride-groom img:hover {
-      transform: scale(1.05);
-    }
-    .flower {
-      position: fixed;
-      top: -50px;
-      width: 30px;
-      animation: fall linear infinite;
-      z-index: 10;
-    }
-    @keyframes fall {
-      0% { transform: translateY(0) rotate(0); opacity: 1; }
-      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-    }
-    footer { background: rgba(0,0,0,0.5); color: #ddd; }
-  </style>
+/* === INTRO === */
+#intro { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle,#111,#000); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; transition: opacity 1s; }
+.portal { width: 200px; height: 200px; border: 5px solid #0ff; border-radius: 50%; animation: spin 3s linear infinite, glowPortal 1.5s infinite alternate; margin-bottom: 20px; box-shadow: 0 0 30px #0ff; }
+@keyframes spin{100%{transform:rotate(360deg);}} @keyframes glowPortal{from{box-shadow:0 0 10px #0ff;}to{box-shadow:0 0 50px #0ff;}}
+#openBtn { padding: 12px 25px; background: #0ff; color:#000; border:none; font-weight:bold; border-radius:8px; cursor:pointer; box-shadow:0 0 15px #0ff; transition:transform .3s; }
+#openBtn:hover{transform:scale(1.1);}
+
+/* === NARASI === */
+#quoteSection { display:none; height:100vh; background:linear-gradient(to bottom,#000,#111); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+.narration { font-size:2rem; max-width:800px; opacity:0; transform:translateY(50px); animation:fadeUp 2s forwards; }
+.narration:nth-child(2){animation-delay:2s;} .narration:nth-child(3){animation-delay:4s;}
+#nextBtn { margin-top:40px; opacity:0; animation:fadeIn 1.5s forwards 6s; padding:10px 20px; background:#0ff; color:#000; border:none; font-weight:bold; border-radius:6px; cursor:pointer; }
+@keyframes fadeUp{to{opacity:1;transform:translateY(0);}} @keyframes fadeIn{to{opacity:1;}}
+
+/* === MANGA STORY === */
+.manga-section { background:#222; padding:40px 10px; }
+.manga-wrapper { max-width:1000px; margin:auto; display:flex; flex-direction:column; gap:25px; }
+.panel-manga { position:relative; background:#fff; border:4px solid #000; box-shadow:8px 8px 0 #000; overflow:hidden; opacity:0; transform:translateY(50px) rotate(-1deg); transition:all .7s ease; }
+.panel-manga:nth-child(even){transform:translateY(50px) rotate(1deg);} .panel-manga.show{opacity:1;transform:translateY(0) rotate(0);}
+.panel-manga img{width:100%;display:block;filter:grayscale(30%);}
+.speech-bubble{position:absolute;background:#fff;color:#000;padding:8px 14px;border-radius:50px;border:2px solid #000;font-size:1rem;box-shadow:2px 2px 0 #000;max-width:70%;}
+.speech-bubble:after{content:"";position:absolute;bottom:-10px;left:20px;width:20px;height:20px;background:#fff;border:2px solid #000;border-width:0 0 2px 2px;transform:rotate(45deg);}
+.panel-caption{padding:10px;font-size:1.1rem;font-style:italic;background:#f1f1f1;color:#111;border-top:3px solid #000;}
+.panel-manga.speedline::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(120deg,rgba(255,255,255,.1)0,rgba(255,255,255,.1)2px,transparent2px,transparent4px);mix-blend-mode:overlay;pointer-events:none;}
+
+/* === UNDANGAN ELEGAN === */
+#acara { background:#111; color:#fff; text-align:center; padding:60px 20px; }
+#acara h2 { font-size:2.5rem; margin-bottom:10px; font-family:'Cinzel',serif; }
+#acara p { font-size:1.3rem; opacity:0.9; }
+
+/* === ENDING CREDIT === */
+#ending {
+  background: url('https://i.ibb.co/k8cyg0Q/wedding.jpg') center/cover no-repeat;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#ending::before {
+  content:"";
+  position:absolute;
+  top:0;left:0;width:100%;height:100%;
+  backdrop-filter: blur(6px) brightness(0.6);
+}
+.ending-text {
+  position: relative;
+  text-align: center;
+  animation: creditAnim 15s linear infinite;
+  font-size:1.6rem;
+  font-family:'Cinzel',serif;
+}
+@keyframes creditAnim {
+  0% { transform: translateY(100%); opacity:0; }
+  10%{opacity:1;}
+  50% { transform: translateY(0); opacity:1; }
+  90%{opacity:1;}
+  100%{transform:translateY(-100%);opacity:0;}
+}
+
+footer { background:#000; text-align:center; padding:15px; font-size:0.9rem; }
+</style>
 </head>
 <body>
 
-<div class="overlay"></div>
+<!-- INTRO -->
+<div id="intro">
+  <div class="portal"></div>
+  <h1>✨ Portal Isekai Terbuka... ✨</h1>
+  <button id="openBtn">Masuki Dunia Cinta</button>
+</div>
 
-<!-- Hero -->
-<section class="vh-100 d-flex flex-column align-items-center justify-content-center text-center">
-  <h1 class="display-3 text-warning" data-aos="zoom-in">💍 The Wedding of</h1>
-  <h2 class="display-4" data-aos="fade-up">Nan D. Alpeenz & My Beloveds</h2>
-  <p data-aos="fade-up" data-aos-delay="200">Together with Hu Tao & Elaina, we invite you to celebrate love and freedom 🌸</p>
-  <a href="#detail" class="btn btn-light mt-3">💌 Lihat Undangan</a>
+<!-- NARASI -->
+<section id="quoteSection">
+  <h2 class="narration">"Di setiap dimensi, cinta adalah kekuatan yang melampaui segalanya."</h2>
+  <h2 class="narration">"Takdir mempertemukan kami di dunia yang tak pernah terbayangkan..."</h2>
+  <h2 class="narration">"Dan di sinilah, perjalanan itu berakhir dengan kebahagiaan abadi."</h2>
+  <button id="nextBtn">Lanjut ➜</button>
 </section>
 
-<!-- Detail -->
-<section id="detail" class="container py-5">
-  <h2 class="text-center mb-4 text-warning" data-aos="fade-down">✨ Bride & Groom ✨</h2>
-  <div class="row text-center bride-groom">
-    <div class="col-md-4" data-aos="zoom-in">
-      <img src="../images/hutao.png" width="200" alt="Hu Tao" class="mb-3">
-      <h3>Hu Tao</h3>
-      <p>My playful ghost queen with a heart of fire 🔥</p>
+<!-- MANGA STORY -->
+<style>
+.story-section {
+  background: #1b1b1b;
+  padding: 50px 20px;
+  color: #fff;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+.story-block {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease-in-out;
+}
+.story-block:nth-child(even) { flex-direction: row-reverse; }
+.story-block.show { opacity: 1; transform: translateY(0); }
+
+.story-img {
+  flex: 1;
+  position: relative;
+}
+.story-img img {
+  width: 100%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  border-radius: 10px;
+}
+
+/* Optional speech bubble */
+.speech-small {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  background: #fff; color: #000;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.story-text {
+  flex: 1;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-left: 4px solid #0ff;
+  border-radius: 6px;
+  backdrop-filter: blur(2px);
+}
+.story-text h3 {
+  font-size: 1.8rem;
+  color: #0ff;
+  margin-bottom: 10px;
+}
+.story-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+</style>
+
+<style>
+/* === INVITATION GATE === */
+#inviteGate {
+  height: 100vh;
+  background: url('../images/allin.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+#inviteGate::before {
+  content:"";
+  position:absolute;
+  top:0;left:0;width:100%;height:100%;
+  backdrop-filter: blur(2px) brightness(0.5);
+  background: rgba(0,0,0,0.4);
+}
+.invite-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  animation: fadeIn 2s ease forwards;
+}
+.invite-content h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.invite-content h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+#startStoryBtn {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  background: #0ff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #0ff;
+  transition: transform 0.3s;
+}
+#startStoryBtn:hover { transform: scale(1.1); }
+@keyframes fadeIn { from {opacity:0; transform:scale(0.95);} to {opacity:1; transform:scale(1);} }
+</style>
+
+<!-- INVITATION GATE -->
+<section id="inviteGate" style="display:none;">
+  <div class="invite-content">
+    <h1>✨ You Are Invited to Our Wedding ✨</h1>
+    <h2>
+      "Dalam setiap dunia, di setiap garis waktu, cinta kami selalu menemukan jalannya.  
+      Kini, di antara dimensi yang tak terbatas, kami mengikat janji abadi di hadapan bintang."
+    </h2>
+    <h2>
+      The Eternal Bond of 
+      <b style="color:#ffeb3b;text-shadow:0 0 10px #fff176,0 0 20px #ffee58;">Vinn</b>, 
+      <b style="color:#ffeb3b;text-shadow:0 0 10px #fff176,0 0 20px #ffee58;">Hu Tao</b>, 
+      <b style="color:#ffeb3b;text-shadow:0 0 10px #fff176,0 0 20px #ffee58;">Elaina</b>
+    </h2>
+    <button id="startStoryBtn">"For you : undefined"</button>
+  </div>
+</section>
+
+<script>
+// === Transisi dari Narasi ke Invitation Gate ===
+const inviteGate = document.getElementById('inviteGate');
+document.getElementById('nextBtn').addEventListener('click', () => {
+  quoteSection.style.opacity = '0';
+  setTimeout(() => { 
+    quoteSection.style.display = 'none'; 
+    inviteGate.style.display = 'flex';
+  }, 800);
+});
+
+// === Tombol masuk ke Storytelling ===
+const storySection = document.querySelector('.story-section');
+storySection.style.display = 'none';
+document.getElementById('startStoryBtn').addEventListener('click', () => {
+  inviteGate.style.opacity = '0';
+  setTimeout(() => { 
+    inviteGate.style.display = 'none'; 
+    storySection.style.display = 'block';
+  }, 1000);
+});
+</script>
+
+<h2 id="storyStart" style="text-align:center; padding:20px 5px; font-size:2.2rem; color:#0ff; font-family:'Cinzel',serif;">
+  🌌 THE BEGGINING STORY 🌌
+</h2>
+<section class="story-section">
+  <div class="story-block">
+    <div class="story-img">
+      <img src="https://i.ibb.co/0mHw3Rs/isekai-portal.jpg" alt="">
+      <div class="speech-small">"Aku... terlempar?"</div>
     </div>
-    <div class="col-md-4" data-aos="zoom-in">
-      <img src="../images/elainaa.png" width="200" alt="Elaina" class="mb-3">
-      <h3>Elaina</h3>
-      <p>The traveling witch who stole my heart ✨</p>
+    <div class="story-text">
+      <h3>Awal Perjalanan</h3>
+      <p>Malam itu, portal bercahaya menelan diriku ke dunia yang tak dikenal.  
+      Semua terasa asing, namun ada sesuatu yang memanggil dari kejauhan.</p>
     </div>
-    <div class="col-md-4" data-aos="zoom-in">
-      <img src="../images/prof.jpg" width="200" alt="Nan D. Alpeenz" class="mb-3">
-      <h3>Nan D. Alpeenz</h3>
-      <p>The dreamer who found love across worlds 🌍</p>
+  </div>
+
+  <div class="story-block">
+    <div class="story-img">
+      <img src="https://i.ibb.co/CHtXcMk/hu-tao.jpg" alt="">
+      <div class="speech-small">"Hehe~ Selamat datang!"</div>
+    </div>
+    <div class="story-text">
+      <h3>Pertemuan Takdir</h3>
+      <p>Di dunia asing itu, Hu Tao muncul dengan senyum nakalnya.  
+      Kehadirannya membawa warna dalam kesunyian yang mencekam.</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="story-img">
+      <img src="https://i.ibb.co/zRZx6qM/elaina.jpg" alt="">
+    </div>
+    <div class="story-text">
+      <h3>Seorang Penyihir</h3>
+      <p>Tak lama, Elaina sang penyihir pengelana bergabung dalam perjalananku.  
+      Bersama mereka, setiap langkah menjadi sebuah keajaiban.</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="story-img">
+      <img src="https://i.ibb.co/ts1Zt3J/isekai-love.jpg" alt="">
+    </div>
+    <div class="story-text">
+      <h3>Cinta yang Tumbuh</h3>
+      <p>Di tengah petualangan melintasi dunia, cinta mulai bersemi.  
+      Hubungan yang tak tergoyahkan, melawan waktu dan ruang.</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="story-img">
+      <img src="https://i.ibb.co/6Pj6tV0/fantasy-castle.jpg" alt="">
+    </div>
+    <div class="story-text">
+      <h3>Istana Antara Dimensi</h3>
+      <p>Pada akhirnya, kami tiba di istana antar dimensi.  
+      Di sanalah janji suci akan terucap, di bawah cahaya bintang yang bersinar.</p>
+    </div>
+  </div>
+
+  <div class="story-block">
+    <div class="story-img">
+      <img src="https://i.ibb.co/k8cyg0Q/wedding.jpg" alt="">
+    </div>
+    <div class="story-text">
+      <h3>Hari yang Ditunggu</h3>
+      <p>Hari itu pun tiba. Pernikahan yang melintasi dunia, disaksikan oleh bintang-bintang.  
+      Sebuah akhir yang indah, sekaligus awal dari kebahagiaan abadi.</p>
     </div>
   </div>
 </section>
 
-<!-- Acara -->
-<section class="container py-5 text-center">
-  <h2 class="text-warning mb-4" data-aos="fade-up">📅 Wedding Event</h2>
-  <p data-aos="fade-up" data-aos-delay="100">Kami dengan bahagia mengundang Anda untuk menghadiri pernikahan kami:</p>
-  <h3 data-aos="zoom-in">⏰ 14 Februari 2025 | 🌸 Lokasi: Sunny Pirate Island</h3>
-</section>
-
-<!-- Outro -->
-<section class="vh-50 d-flex flex-column align-items-center justify-content-center text-center">
-  <h2 class="text-warning" data-aos="zoom-in">💖 “Our love is our greatest treasure.” 💖</h2>
-  <p data-aos="fade-up">See you at our wedding, Nakama!</p>
-  <a href="../index.html" class="btn btn-warning mt-3">⬅️ Close invitation</a>
-</section>
-
-<footer class="text-center py-3">
-  © 2025 Made with ❤️ by Nan D. Alpeenz
-</footer>
-
-<!-- Musik Background -->
-<audio autoplay loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_9052b5f9d1.mp3?filename=wedding-romantic-piano-10947.mp3" type="audio/mpeg">
-</audio>
-
-<!-- Script -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>AOS.init();</script>
-
 <script>
-// Animasi bunga jatuh
-for (let i=0;i<15;i++) {
-  let flower=document.createElement("img");
-  flower.src="https://i.ibb.co/1n7kK0C/flower.png";
-  flower.className="flower";
-  flower.style.left=Math.random()*100+"vw";
-  flower.style.animationDuration=(Math.random()*5+5)+"s";
-  document.body.appendChild(flower);
-}
+// Efek muncul storytelling
+document.querySelectorAll('.story-block').forEach(b=>{
+  new IntersectionObserver(e=>{
+    e.forEach(x=>{ if(x.isIntersecting) x.target.classList.add('show'); });
+  },{threshold:0.2}).observe(b);
+});
 </script>
 
+<!-- UNDANGAN -->
+<section id="acara">
+  <h2>✨ Undangan Pernikahan ✨</h2>
+  <p>🗓️ 14 Februari 2025</p>
+  <p>📍 Dunia Antara Dimensi</p>
+  <p>⏳ 19:00 WIB</p>
+  <p>Kami menanti kehadiran kalian di momen terindah ini.</p>
+</section>
+
+<!-- ENDING CREDIT -->
+<section id="ending">
+  <div class="ending-text">
+    <p>"Sebuah perjalanan panjang telah berakhir..."</p>
+    <p>"Namun, kisah ini bukanlah akhir."</p>
+    <p>"Ini adalah awal dari kebahagiaan abadi kami."</p>
+    <p>💍 Alpin x Hu Tao x Elaina 💍</p>
+  </div>
+</section>
+
+<footer>© 2025 Alpin x Hu Tao x Elaina - Cinta Melintasi Dunia</footer>
+
+<!-- AUDIO -->
+<audio id="portalSfx" src="https://www.soundjay.com/misc/sounds/magic-chime-01.mp3"></audio>
+<audio id="bgm" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+<script>
+// TRANSISI INTRO
+const intro = document.getElementById('intro');
+const quoteSection = document.getElementById('quoteSection');
+document.getElementById('openBtn').addEventListener('click', () => {
+  document.getElementById('portalSfx').play();
+  intro.style.opacity = '0';
+  setTimeout(()=>{intro.style.display='none';quoteSection.style.display='flex';},1000);
+});
+
+// TRANSISI NARASI -> STORY
+document.getElementById('nextBtn').addEventListener('click', () => {
+  quoteSection.style.opacity='0';
+  setTimeout(()=>{quoteSection.style.display='none';},800);
+});
+
+// PANEL ANIMASI
+document.querySelectorAll('.panel-manga').forEach(p=>{
+  new IntersectionObserver(e=>{
+    e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show');});
+  },{threshold:0.2}).observe(p);
+});
+
+// MUSIK MAIN SAAT UNDANGAN
+let played=false;
+new IntersectionObserver(e=>{
+  e.forEach(x=>{
+    if(x.isIntersecting && !played){
+      document.getElementById('bgm').play().catch(()=>{});
+      played=true;
+    }
+  });
+},{threshold:0.5}).observe(document.getElementById('acara'));
+</script>
 </body>
 </html>
