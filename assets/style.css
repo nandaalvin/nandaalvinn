@@ -258,3 +258,16 @@ section {
   color: #fff;
   overflow: hidden;
 }
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+  h1, h2, h3 { font-size: 1.6rem !important; }
+  p, li { font-size: 0.9rem !important; }
+  .lead { font-size: 1rem !important; }
+  img { max-width: 100% !important; height: auto !important; }
+  .arc-img, .crew-img { border-radius: 10px; }
+  .sales-item img { width: 100%; }
+  section.container { padding: 20px 10px; }
+}
+
+
