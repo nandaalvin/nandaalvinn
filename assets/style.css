@@ -28,17 +28,78 @@ body {
   background: #ff6b6b;
 }
 
-/* === Hero Section === */
-#hero {
-  height: 100vh;
-  background: url('project/images/langit.jpg') center/cover no-repeat;
+/* === Responsive Mobile Fix === */
+@media (max-width: 768px) {
+  section.container, .hero {
+    padding: 40px 15px !important;
+  }
+  h1, h2, h3 {
+    font-size: 1.4rem !important;
+  }
+  .lead, p, li {
+    font-size: 0.9rem !important;
+  }
+  .hero-img {
+    width: 140px !important;
+  }
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* === Responsive Mobile Fix === */
+@media (max-width: 768px) {
+  section.container, .hero {
+    padding: 40px 15px !important;
+  }
+  h1, h2, h3 {
+    font-size: 1.4rem !important;
+  }
+  .lead, p, li {
+    font-size: 0.9rem !important;
+  }
+  .hero-img {
+    width: 140px !important;
+  }
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+html, body {
+  overflow-x: hidden;
+}
+
+.arc-img, .crew-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .arc-img, .crew-img {
+    margin-bottom: 10px;
+  }
+}
+
+.hero {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
-  color: #fff;
+  padding-top: 70px; /* agar tidak ketutup navbar */
 }
+
 #hero::before {
   content: "";
   position: absolute;
@@ -258,16 +319,3 @@ section {
   color: #fff;
   overflow: hidden;
 }
-
-/* Responsive untuk mobile */
-@media (max-width: 768px) {
-  h1, h2, h3 { font-size: 1.6rem !important; }
-  p, li { font-size: 0.9rem !important; }
-  .lead { font-size: 1rem !important; }
-  img { max-width: 100% !important; height: auto !important; }
-  .arc-img, .crew-img { border-radius: 10px; }
-  .sales-item img { width: 100%; }
-  section.container { padding: 20px 10px; }
-}
-
-
